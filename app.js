@@ -116,4 +116,27 @@
 
 // Output - name is not a function
 
-// 16. why - 
+// 16. why - or || operator will always check first positive value, 
+// const result = false || {} || null;
+// console.log(result);
+// output - {}
+
+// 17. why - if there is not positive /true value then in it show last valuye
+// const result = null || false || '';
+// console.log(result);
+// output - '' - empty string
+
+// 18. why - coz array is a true value
+// const result = [] || 0 || true;
+// console.log(result);
+// output - []
+
+// 19. why-
+// console.log(Promise.resolve(5));
+
+// output - Promise { <state>: "fulfilled", <value>: 5 }
+
+// 20. why - it will compare emoji unicode 
+// console.log("😍" === "😍");
+
+// Output - true

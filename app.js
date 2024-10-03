@@ -511,3 +511,96 @@
 // console.log(sayHi.call(person, 21)); // it will work perfectly
 // console.log(sayHi.bind(person, 21)); // it will return function. we have to call this function after bind then it will return value 
 
+// 76. why - because 0 is a number | it will not check boolean here.
+// function sayHi(){
+//     return(()=> 0)();
+// }
+// console.log(typeof sayHi());
+// output - number 
+
+// 77. why - if we use iife then it will be number else ot will be function.
+// function sayHi(){
+//         return()=> 0;
+//     }
+//     console.log(typeof sayHi());
+// output - function 
+
+// 78. why - type of 1 is number and number is a string
+// console.log(typeof typeof 1);
+
+// output - string 
+
+// 79. why - between 2 to 5 index will be empty
+// const numbers = [2,1,2];
+// numbers[6] = 11;
+// console.log(numbers);
+// output - [2,1,2, empty x 3, 11];
+
+// 80. why - it will be infinite array. On every 9th index this arrow will repeate.
+// const numbers = [2,1,2];
+// numbers[9] = numbers;
+// console.log(numbers);
+
+// 81. Q - everything in javascript is a 
+// a. primitive or Object  -- Right
+// b. function  or object 
+// c. only objects
+// d. number or object 
+
+// 82. why - 
+// console.log(!!null); false
+// console.log(!!""); false
+// console.log(!!1); true
+
+// 83. why - setInterval will always return a ID for clearTimeout
+// console.warn(console.log(setInterval('Hi'), 1000));
+// console.warn(console.log(setInterval('Hi'), 1000));
+// console.warn(console.log(setInterval('Hi'), 1000));
+
+// 84. why - string will become array and due to spread it will asign on different index
+// console.log([..."arsad"]);
+// output - ['a','r','s','a','d'];
+
+// 85- why - becouse secondPromise will resolve first. If we use .race means it will return that who will will the race.
+// const firstPromise = new Promise((res, rej) =>{
+//     setTimeout(res, 500, 'one');
+// });
+
+// const secondPromise = new Promise((res, rej)=>{
+//     setTimeout(res, 100, 'two');
+// });
+
+// Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
+// output - two 
+
+// 86. why - becouse memory location changed
+// let person = { name: 'peter'};
+// const numbers = [person];
+// person = null;
+// console.log(numbers);
+// output - { name: 'peter'}
+
+// 87. why - it will return a keys
+// const person = {
+//     name: 'batman',
+//     age: 21
+// };
+
+// for(const item in person){
+//     console.log(item);
+// }
+// output - name | age 
+
+// 88. why - number + string = string
+// let data = 3 + 4 + '5';
+// console.log(data);
+// console.log(typeof data);
+// output - string 
+
+// 89. why - it will check first and others will be added with typeof
+// console.log(typeof 3 + 4 + '5');
+// output - number45
+
+// 89. why - 
+
+// output - 

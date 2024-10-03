@@ -1,3 +1,5 @@
+// video - https://www.youtube.com/watch?v=Naim9y4n3jI
+
 //1. why - Because of memory location - Both memory location is differnet
 
 // let a = [];

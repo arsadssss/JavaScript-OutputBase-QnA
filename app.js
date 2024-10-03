@@ -601,6 +601,90 @@
 // console.log(typeof 3 + 4 + '5');
 // output - number45
 
-// 89. why - 
+// 90. why - if we insert + sign before any string it will become a string
+// console.log(typeof (3 + 4 + +'5'));
+// output - number 
 
+// 91. why - it will compare memory location that will be different
+// console.log([] == []);
+// output - false
+
+// 92. why - if nothing will be with return then it will be undefined
+// let data = [1,2,3].map(num =>{
+// if(typeof num === 'number') return;
+// return num * 2;
+// });
+
+// console.log(data);
+
+// output - [ undefined, undefined, undefined ];
+
+// 93. why - when we send an object to a function it sends call by refrence so memory location will also send so we can able to change the name.
+// function getInfo(member){
+//     member.name = 'arsad';
+// }
+// const person = {name: 'Ismat'};
+
+// getInfo(person);
+// console.log(person);
+
+// output - {name: 'arsad'};
+
+// 94. why - if we use return it will override the value
+// function Car(){
+//     this.make  = 'tata';
+//     return {make : 'Kia'};
+// }
+// const myCar = new Car();
+// console.log(myCar.make);
 // output - 
+
+// 95. why - X is defined inside a block so it is a block  variable
+// (()=>{
+//     let x = ( y = 10);
+// })();
+// console.log(typeof x);
+// output - undefined
+
+// 96. why - Y is not defined inside so it is a variable &  a global variable
+    // (()=>{
+    //     let x = y = 10;
+    // })();
+    // console.log(typeof y);
+    // output - number
+
+// 97. why - diff diff function and it a function and x is scope level variable
+//     (()=>{
+//         let x = 10;
+//     })();
+//     (()=>{
+//         let x = 10;
+//     })();
+//     console.log(typeof x);
+// output - undefined  
+
+// 98. why - scope variable can be declare again and gain
+
+// (()=>{
+//     let x = y = 10;
+// })();
+// (()=>{
+//     let x = y = 20;
+// })();
+// console.log(y);
+// output - 20
+
+// 99. why - 
+// let x = 100;
+// (()=>{
+//  var x = 20;
+// })();
+// console.log(x);
+// output - 100
+
+// 100. why - 
+// console.log(!true - true);
+
+// 101. why - -1
+// console.log(true + +"10");
+// output - 11
